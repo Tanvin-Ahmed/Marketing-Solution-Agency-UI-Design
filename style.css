@@ -311,6 +311,12 @@ main .features .container article {
 	padding: 1.5rem;
 	background-color: var(--card-bg);
 	margin-top: 1rem;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+main .features .container article:hover {
+	transform: translateY(-10px);
 }
 
 main .features .container article i {
@@ -445,4 +451,71 @@ footer {
 footer .container {
 	text-align: center;
 	color: white;
+}
+
+/* responsive style */
+@media (max-width: 992px) {
+	.container {
+		width: 768px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 576px;
+	}
+	main .hero .container h1 {
+		font-size: 40px;
+	}
+	p {
+		font-size: 18px;
+	}
+	main .services .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	main .about-us .container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .plan .container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .portfolio .container .card-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	main .testimonials .container .card-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	main .mail-contact .container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .contact .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		width: 400px;
+	}
+	main .services .container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .portfolio .container .card-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .testimonials .container .card-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	main .contact .container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		width: 85%;
+	}
+	main .hero .container h1 {
+		font-size: 35px;
+	}
 }
